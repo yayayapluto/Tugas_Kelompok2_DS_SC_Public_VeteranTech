@@ -14,7 +14,7 @@ https://colab.research.google.com/drive/1Do2Qb1VEwmLDYHRO-IlmMAeA82qnKunw?usp=sh
 ├── README.md            <- file ini (ringkasan proyek)
 ├── RESULT.md            <- hasil notebook: 5 visualisasi EDA dan tabel bobot ICP
 ├── assets/              <- PNG hasil notebook (g1 sampai g5)
-├── notebooks/           <- Kelompok2_DS_SC_Public_VeteranTech_FINAL.ipynb
+├── notebooks/           <- Kelompok2_DS_SC_Public_VeteranTech.ipynb
 ├── data/                <- 5 CSV mentah + PDF BPS + README.md (detail sumber dan penggugur)
 └── laporan/             <- laporan progres
 ```

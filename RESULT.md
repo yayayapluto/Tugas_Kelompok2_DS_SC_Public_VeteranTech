@@ -1,6 +1,6 @@
 # Hasil — Tugas 2 Milestone 1 (Kelompok 2)
 
-Halaman ini merangkum hasil notebook `Kelompok2_DS_SC_Public_VeteranTech_FINAL.ipynb`.
+Halaman ini merangkum hasil notebook `Kelompok2_DS_SC_Public_VeteranTech.ipynb`.
 Pipeline-nya memproses 5 dataset publik atas 27 wilayah Jawa Barat, menyaringnya menjadi
 24 wilayah lewat kriteria penggugur, menormalisasi 5 indikator ICP dengan Min-Max ke
 rentang 0 sampai 1, lalu menyusun rancangan tabel bobot prioritas berbasis ICP Klay.

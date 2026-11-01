@@ -16,7 +16,7 @@ https://colab.research.google.com/drive/1Do2Qb1VEwmLDYHRO-IlmMAeA82qnKunw?usp=sh
 ├── assets/              <- PNG hasil notebook (g1 sampai g5)
 ├── notebooks/           <- Kelompok2_DS_SC_Public_VeteranTech.ipynb
 ├── data/                <- 5 CSV mentah + PDF BPS + README.md (detail sumber dan penggugur)
-└── laporan/             <- laporan progres
+└── penugasan/           <- dokumen penugasan: case brief Skalar, ICP brief, dan PDF instruksi kampus
 ```
 
 ## Ringkasan pengerjaan
@@ -61,7 +61,7 @@ verifikasi langsung menjadi cepat: setiap endpoint diuji sendiri sebelum data di
 dataset PDRB ditemukan melalui API pencarian portal baru Jabar (Galura), sedangkan indikator
 internet, yang tidak tersedia sebagai dataset API, dilacak sampai ke publikasi PDF BPS.
 
-Katalog ini sendiri tidak dikutip sebagai sumber data pada Tabel 1.1, sebab ia hanya
+Katalog ini sendiri tidak dikutip sebagai sumber data pada Tabel 2.1.2, sebab ia hanya
 menghubungkan ke sumber aslinya; sumber yang dicantumkan tetap Open Data Jabar dan BPS.
 Repo katalog juga ditempatkan pada folder `tools/` yang di-gitignore agar tidak ikut ke
 dalam repo ini.
@@ -91,5 +91,8 @@ Rincian lengkapnya ada pada [data/README.md](data/README.md).
   menyediakan API untuk indikator tersebut.
 - e-Samsat dipakai sebagai proksi adopsi pembayaran digital, karena data transaksi QRIS
   UMKM tidak tersedia untuk publik.
+- Indikator internet dan e-Samsat per UMKM berkorelasi sangat tinggi (r = 0,93), sehingga
+  bobot 20% dan 15% pada tabel bobot sebagian mengukur hal yang serupa; hal ini dijadikan
+  bahan uji sensitivitas bobot pada Final Project.
 - Indeks skor akhir, K-Means, uji sensitivitas, dan Top 5 segmen dikerjakan pada tahap
   Final Project, di luar cakupan Milestone 1.

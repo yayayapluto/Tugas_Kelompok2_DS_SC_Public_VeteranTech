@@ -5,10 +5,6 @@ Pipeline-nya memproses 5 dataset publik atas 27 wilayah Jawa Barat, menyaringnya
 24 wilayah lewat kriteria penggugur, menormalisasi 5 indikator ICP dengan Min-Max ke
 rentang 0 sampai 1, lalu menyusun rancangan tabel bobot prioritas berbasis ICP Klay.
 
-> Gambar di bawah dimuat dari folder `assets/` (hasil `plt.savefig` pada notebook).
-> Pastikan kelima PNG sudah ada di folder tersebut sebelum di-push, yaitu dengan
-> mengunduhnya dari folder `assets/` di Drive Colab.
-
 ## 1. Ringkasan pipeline
 
 | Tahap | Hasil |
@@ -27,7 +23,7 @@ rentang 0 sampai 1, lalu menyusun rancangan tabel bobot prioritas berbasis ICP K
 ![Distribusi total UMKM 2023](assets/g1_distribusi_umkm.png)
 
 Sebaran total UMKM antar 24 wilayah condong ke kanan (skewness 0,45). Tiga wilayah
-teratas adalah Kabupaten Bogor (571.944), Kabupaten Bandung (537.801), dan Kota Bandung
+teratas adalah Kabupaten Bogor (570.944), Kabupaten Bandung (537.801), dan Kota Bandung
 (523.584), yang menyendiri di atas 500 ribu unit. Artinya, volume calon leads terpusat
 pada segelintir wilayah. Pengecekan IQR tidak menemukan outlier, sehingga konsentrasi
 tersebut memang merupakan karakteristik pasar dan bukan kesalahan data.
@@ -47,20 +43,21 @@ basis kuliner yang kuat.
 
 ![Internet vs UMKM](assets/g3_internet_vs_pasar.png)
 
-Korelasinya hampir nol (r = 0,02): wilayah dengan penetrasi internet tinggi tidak
-otomatis memiliki banyak UMKM. Kabupaten dengan pasar sangat besar justru berada pada
-penetrasi internet menengah, sedangkan kota kecil unggul secara digital tetapi kecil
-pasarnya. Kesiapan digital dan ukuran pasar dengan demikian mengukur hal yang berbeda,
-sehingga keduanya memang layak menjadi komponen terpisah dalam skor prioritas.
+Korelasinya hampir nol (r = 0,02): penetrasi internet tinggi tidak otomatis berarti
+pasar UMKM besar. Dua pasar terbesar (Kabupaten Bogor dan Kabupaten Bandung) berada di
+penetrasi sekitar 75%, sedangkan wilayah dengan internet di atas 84% tersebar dari
+sekitar 87 ribu hingga 523 ribu UMKM. Kesiapan digital dan ukuran pasar mengukur hal
+yang berbeda, sehingga keduanya layak menjadi komponen terpisah.
 
 ### G4 — Aktivitas ekonomi vs adopsi pembayaran digital (bivariat)
 
 ![PDRB vs e-Samsat](assets/g4_pdrb_vs_adopsi.png)
 
-Korelasi moderat positif (r = 0,41): masyarakat berdaya beli tinggi cenderung lebih
-banyak bertransaksi non-tunai melalui e-Samsat, dengan Kota Depok dan Kota Bekasi
-sebagai wilayah adopsi tertinggi per UMKM. Sebarannya sendiri cukup luas, sehingga
-daya beli mendorong perilaku digital tetapi ada faktor lain yang turut bekerja.
+Korelasi moderat positif (r = 0,41): wilayah dengan PDRB per kapita lebih tinggi
+cenderung lebih banyak bertransaksi non-tunai melalui e-Samsat. Namun dua wilayah
+dengan adopsi tertinggi per UMKM (Kota Depok dan Kota Bekasi) berada di PDRB menengah,
+sedangkan PDRB tertinggi (sekitar 147 juta Rp) hanya beradopsi sedang. Daya beli
+mendorong perilaku digital, tetapi ada faktor lain yang turut bekerja.
 
 ### G5 — Matriks korelasi antar indikator (multivariat)
 
